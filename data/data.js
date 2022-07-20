@@ -1,14 +1,14 @@
 export const dataBase = [
   {
     question: "Cual es la capital de colombia?",
-    choices: ["Lima", "Buenos Aires", "CD Mexico", "Bogota"],
-    answer: "Bogota",
+    choices: ["Lima1.1", "Buenos Aires1.1", "CD Mexico1.1", "Bogota1.1"],
+    answer: "Bogota1.1",
     category: 1,
   },
   {
     question: "Cual es la capital de MEXICO?",
-    choices: ["Lima", "Buenos Aires", "CD Mexico", "Bogota"],
-    answer: "CD Mexico",
+    choices: ["Lima1.2", "Buenos Aires1.2", "CD Mexico1.2", "Bogota1.2"],
+    answer: "CD Mexico1.2",
     category: 1,
   },
   {
