@@ -1,5 +1,5 @@
 // ts-check
-
+import { updateTable } from "../app.js";
 import { Gamer } from "./Gamer.js";
 export class UI {
 
@@ -42,8 +42,7 @@ export class UI {
       e.preventDefault();
       callback(new Gamer(inputName.value, inputEmail.value));
 
-    })
-   
+    })   
     containerForm.append(inputName, inputEmail, inputButton);
     container.append(containerForm);
   } 

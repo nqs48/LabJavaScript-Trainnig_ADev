@@ -11,14 +11,19 @@ const crearItem = (quiz) => {
   gamerInfo.push(quiz.gamer);
 };
 
-const updateTable=()=>{
+/**
+ * Method to catch data of local storage and update
+ */
+export const updateTable=()=>{
   if(localStorage.getItem("gamers")){
     let items = JSON.parse(localStorage.getItem("gamers"));
     gamerInfo.push(...items);
-    console.log("Estos son los items: " + items);
   }
 }
 
+/**
+ * Method to save data gamer
+ */
 const guardarDB = () => {
   localStorage.setItem("gamers", JSON.stringify(gamerInfo));
 };
@@ -26,8 +31,8 @@ const guardarDB = () => {
 
 /**
  * 
- * @param {Quiz} quiz 
- * @param {UI} ui 
+ * @param {Quiz} quiz Instance of class Quiz
+ * @param {UI} ui Instance of class UI
  */
 const renderPage = (quiz, ui )=>{
   if(quiz.gaming){
@@ -66,13 +71,9 @@ function main() {
 
   ui.showFormData((gamer) =>{
     const quiz = new Quiz(gamer, listQuestions);
-    console.log(quiz)
-    console.log(ui)
     renderPage(quiz, ui);
   });
 }
-
-
 
 main();
 

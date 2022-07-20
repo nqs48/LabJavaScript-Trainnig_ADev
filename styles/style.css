@@ -20,6 +20,13 @@ body {
   text-align: center;
 }
 
+.quiz{
+  background-color: #e3f6f5;
+  width: 30rem;
+  padding: 4rem;
+  text-align: center;
+}
+
 h1 {
   color: #57636e;
   font-size: 3rem;

@@ -1,3 +1,6 @@
+/**
+ * Class question
+ */
 export class Question {
   /**
    * Class Question Constructor

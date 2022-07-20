@@ -26,7 +26,7 @@ export class Quiz {
     let questionsForLevel = this.questions.filter(
       (question) => question.category === this.level
     );
-    let random = Math.floor(Math.random() * 2);
+    let random = Math.floor(Math.random() * 5);
     this.currentQuestion = questionsForLevel[random];
     return this.currentQuestion;
   }
@@ -43,16 +43,11 @@ export class Quiz {
       if(this.level >5){
         this.gamer.score*=2;
         this.gaming = false;
-        
-      
       }
     } else {
       this.gamer.score = 0;
       this.gaming = false;
     }
-    console.log("Level: "+this.level)
-    console.log("Score: "+this.gamer.score);
-    console.log("Gamming: "+this.gaming);
   }
 
 }
