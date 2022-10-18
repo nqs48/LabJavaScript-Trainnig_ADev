@@ -1,4 +1,4 @@
-# LABORATORIO JAVASCRIPT POO  -- SOFKA
+# WhoWants_ADev  -- SOFKA
 In this challenge we are going to model a question and answer contest, the intention is to design a solution that allows having a bank of questions with different options for a single answer, in addition each question must be in a category or a group of similar questions of the same level, for each round a prize must be assigned to get, The rounds of the game are levels that increase as the player wins prizes.
 
 
