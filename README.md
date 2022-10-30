@@ -15,7 +15,7 @@ Responsive design of a dynamic web page, where you can play a game of who wants 
 - Consumption of data from Local Storage
 
 <p align="center">
-<a href="https://who-wants-qi.netlify.app/"><img src="https://img.shields.io/badge/Click to webpage-3777ff?style=for-the-badge" width="20%"/></a>
+<a href="https://who-wants-qi.netlify.app/"><img src="https://img.shields.io/badge/Click to webpage-ff8811?style=for-the-badge" width="20%"/></a>
 </p>
 
 ---
