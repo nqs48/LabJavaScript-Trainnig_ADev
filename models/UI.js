@@ -1,6 +1,7 @@
 // ts-check
 import { updateTable } from "../app.js";
 import { Gamer } from "./Gamer.js";
+import { success, error} from "../assets/js/sweet.alerts.js";
 export class UI {
   constructor() {}
 
@@ -31,7 +32,6 @@ export class UI {
     inputEmail.setAttribute("type", "email");
     inputEmail.placeholder = "Email";
     inputEmail.className = "style_input";
-
 
     const inputButton = document.createElement("button");
     inputButton.type = "submit";
@@ -106,33 +106,52 @@ export class UI {
    *
    * @param {Quiz} quiz
    */
-  showScores(quiz, f1, f2) {
-    console.log(quiz.gamer.name);
-    console.log(quiz.gamer.score);
+  showScores(quiz) {
+    // console.log(quiz.gamer.name);
+    // console.log(quiz.gamer.score);
 
-    const winner = document.createElement("h1");
-    winner.innerText = "You win the higher rewards";
+    // const winner = document.createElement("h1");
+    // winner.innerText = "You win the higher rewards";
 
-    const loser = document.createElement("h1");
-    loser.innerText = "You lose all rewards";
+    // const loser = document.createElement("h1");
+    // loser.innerText = "You lose all rewards";
 
-    const saver = document.createElement("h1");
-    saver.innerText = "You save your current reward";
+    // const saver = document.createElement("h1");
+    // saver.innerText = "You save your current reward";
 
-    const name = document.createElement("h2");
-    name.innerText = "Gamer: " + quiz.gamer.name;
+    // const name = document.createElement("h2");
+    // name.innerText = "Gamer: " + quiz.gamer.name;
 
-    const score = document.createElement("h3");
-    score.innerText = "Your Score: " + quiz.gamer.score;
+    // const score = document.createElement("h3");
+    // score.innerText = "Your Score: " + quiz.gamer.score;
 
-    const container = document.getElementById("quiz");
-    container.innerHTML = "";
+    // const container = document.getElementById("quiz");
+    // container.innerHTML = "";
     if (quiz.gamer.score == 10000) {
+      success("You win the higher rewards").then(() => {
+        setTimeout(() => {
+          location.reload();
+        }, 1000);
+      });
+      
       container.append(winner, name, score);
     } else if (quiz.gamer.score == 0) {
-      container.append(loser, name, score);
+      error("ooops", "You lose all rewards").then(() => {
+        setTimeout(() => {
+          location.reload();
+        }, 1000);
+      });
+      
+      // container.append(loser, name, score);
     } else {
-      container.append(saver, name, score);
+      success("You save your current reward").then(() => {
+        setTimeout(() => {
+          location.reload();
+        }, 1000);
+      });
+      // container.append(saver, name, score);
+      
     }
+    
   }
 }

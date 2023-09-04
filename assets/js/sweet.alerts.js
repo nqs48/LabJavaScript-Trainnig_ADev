@@ -21,7 +21,7 @@ export const success = (title) => {
 };
 
 export const error = (title, text) => {
-  Swal.fire({
+  return Swal.fire({
     icon: "error",
     title: title,
     text: text,
@@ -35,9 +35,6 @@ export const error = (title, text) => {
       popup: "animate__animated animate__fadeOutUp animated__fast",
     },
     background: "rgba(0, 8, 20)",
-    backdrop: `
-      rgba(38, 70, 83, 0.35)
-    `,
   });
 };
 
